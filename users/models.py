@@ -12,10 +12,10 @@ class User(AbstractUser):
     GENDER_CHOICE = ((GENDER_MALE, 'Male'), (GENDER_FEMALE, 'Female'),
                      (GENDER_OTHER, 'Other'))
 
-    LANGAUGE_ENGLICH = 'en'
-    LANGAUGE_KOREAN = 'kr'
+    LANGUAGE_ENGLICH = 'en'
+    LANGUAGE_KOREAN = 'kr'
 
-    LANGAUGE_CHOICE = ((LANGAUGE_ENGLICH, 'English'), (LANGAUGE_KOREAN,
+    LANGUAGE_CHOICE = ((LANGUAGE_ENGLICH, 'English'), (LANGUAGE_KOREAN,
                                                        'Korean'))
 
     CURRENCY_USD = 'usd'
@@ -27,7 +27,7 @@ class User(AbstractUser):
     gender = models.CharField(choices=GENDER_CHOICE, max_length=10, blank=True)
     bio = models.TextField(blank=True)
     birthdate = models.DateField(blank=True, null=True)
-    langauge = models.CharField(choices=LANGAUGE_CHOICE,
+    language = models.CharField(choices=LANGUAGE_CHOICE,
                                 max_length=2,
                                 blank=True)
     currency = models.CharField(choices=CURRENCY_CHOICE,
